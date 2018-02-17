@@ -43,6 +43,4 @@ function deepestChild() {
 			deepestChild = depth;
 		}
 		return deepestChild;
-				
-  
-}
+	}
