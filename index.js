@@ -20,7 +20,29 @@ function increaseRankBy(n) {
 }
 
 function deepestChild() {
- 
+ var depth = document.getElementById("grand-node");
+		var deepestChild = "";
+		if (depth.childElementCount > 0) {
+			if (depth.children[0].childElementCount > 0) {
+				if (depth.children[0].children[0].childElementCount > 0){
+					if (depth.children[0].children[0].children[0].childElementCount > 0) {
+						if (depth.children[0].children[0].children[0].children[0].childElementCount > 0) {
+						}	else {
+							deepestChild = depth.children[0].children[0].children[0].children[0];
+						}
+					} else {
+						deepestChild = depth.children[0].children[0].children[0];
+					}
+				} else {
+					deepestChild = depth.children[0].children[0];
+				}
+			} else {
+				deepestChild = depth.children[0];
+			}
+		} else {
+			deepestChild = depth;
+		}
+		return deepestChild;
 				
   
 }
